@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>radio</title>
+</head>
+
+<body>
+<div class="box">
+<h2>checkbox</h2>
+<input type="checkbox" name="chk" id="chk">
+<label for="chk">클릭하세요.-토글(Toggle)</label>
+<div class="ibox">
+<img src="http://placehold.it/500x400" alt="">
+</div>
+<hr color="teal">
+<style>
+input#chk {}
+
+label[for=chk] {
+background: teal;
+padding: 10px;
+cursor: pointer;
+}
+
+/* #chk 체크박스가 선택되면 이미지가 안보임
+선택이 안되면 이미지가 표시 */
+input#chk:checked~.ibox {
+/* display: none; */
+visibility: hidden;
+}
+</style>
+
+<h2>radio - toggle 기능 미지원</h2>
+<input type="radio" name="ra" id="ra01" checked>
+<input type="radio" name="ra" id="ra02">
+<div class="rabox">
+<label for="ra01">이미지1</label>
+<label for="ra02">이미지2</label>
+<aside class="raimgbox">
+<div class="raimg01"></div>
+<div class="raimg02"></div>
+</aside>
+</div><!-- rabox -->
+<style>
+input[type=radio] {
+display: none;
+}
+
+input#ra01 {}
+
+input#ra02 {}
+
+.rabox {
+border: 1px solid skyblue;
+width: 500px;
+padding: 10px;
+overflow: hidden;
+height: 350px;
+margin-bottom: 50px;
+}
+
+.rabox>label {
+background: lightpink;
+width: 50%;
+height: 50px;
+display: table;
+float: left;
+text-align: center;
+line-height: 50px;
+border-radius: 10px 10px 0px 0px;
+/* border: 1px dotted #222; */
+box-sizing: border-box;
+font-weight: bold;
+}
+
+.rabox>label[for=ra01] {}
+
+.rabox>label[for=ra02] {}
+
+.rabox>aside {
+width: 100%;
+height: 300px;
+background: springgreen;
+/* border: 1px dotted #222; */
+position: relative;
+top: 52px;
+box-sizing: border-box;
+}
+
+.rabox div {
+background: cornflowerblue;
+/* border: 1px solid palegoldenrod; */
+height: 100%;
+position: absolute;
+width: 100%;
+box-sizing: border-box;
+}
+
+.rabox div.raimgbox {}
+
+.rabox div::before {
+color: darkblue;
+font-weight: bold;
+text-transform: uppercase;
+text-align: center;
+line-height: 300px;
+display: block;
+}
+
+.rabox div.raimg01 {}
+
+.rabox div.raimg01::before {
+content: "raimg01";
+}
+
+.rabox div.raimg02 {}
+
+.rabox div.raimg02::before {
+content: "raimg02";
+/* border: 2px solid #222; */
+}
+
+/* radio 단추가 선택되면 배경색이 골드색으로 변경 */
+/* input:nth-of-type(1)~.rabox>label {
+background: lightpink;
+} */
+
+input:nth-of-type(2):checked~.rabox>label:nth-of-type(1) {
+background: gold;
+border: 2px solid coral;
+border-bottom: none;
+}
+
+input:nth-of-type(2):checked~.rabox>label:nth-of-type(2) {
+border-bottom: 2px solid coral;
+}
+
+input:nth-of-type(3):checked~.rabox>label:nth-of-type(2) {
+background: gold;
+border: 2px solid coral;
+border-bottom: none;
+}
+
+input:nth-of-type(3):checked~.rabox>label:nth-of-type(1){
+border-bottom: 2px solid coral;
+}
+
+/* 첫 라디오단추 선택되면 라벨색은 골드색으로 변경되었고, raimg01 내용이 표시되고,
+둘째 라디오단추 선택되면 라벨색은 골드색으로 변경되었고, raimg02가 표시되도록 코딩 */
+.rabox div {
+visibility: hidden;
+/* displat: block */
+}
+
+input:nth-of-type(2):checked~.rabox>aside>.raimg01 {
+visibility: visible;
+background: gold;
+border: 2px solid coral;
+border-top: none;
+}
+
+input:nth-of-type(3):checked~.rabox>aside>.raimg02 {
+visibility: visible;
+background: gold;
+border: 2px solid coral;
+border-top: none;
+}
+</style>
+</div><!-- box -->
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

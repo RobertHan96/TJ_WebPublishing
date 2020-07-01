@@ -1,0 +1,300 @@
+@import url(reset.css);
+
+body {
+    font: normal 16px/150% 'Roboto Slab', serif;
+    overflow-x: hidden;
+    /* 가로스크롤바 방지 */
+}
+
+a {
+    color: #222;
+}
+
+/* layout */
+.wrap {
+    width: 960px;
+    margin: 5px auto 50px auto;
+}
+
+header,
+section,
+footer {}
+
+header {
+    height: 150px;
+    /* background: moccasin; */
+}
+
+section {
+    /* background: paleturquoise; */
+}
+
+footer {
+    border: 1px solid #222;
+    padding: 10px 0px;
+}
+
+/* header */
+header {
+    position: relative;
+}
+
+header>.logo {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    text-transform: capitalize;
+}
+
+header>.logo>a {
+    display: block;
+    width: 100%;
+    /* background: palevioletred; */
+}
+
+header>.logo>a>span {
+    display: block;
+    margin: 10px 0px 0px 20px;
+}
+
+header>.logo>a>.sp_1 {
+    margin-bottom: 10px;
+}
+
+header>.logo>a>.sp_2 {}
+
+header>.h_ul1 {
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+header>.h_ul1::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header>.h_ul1>li {
+    float: left;
+    position: relative;
+}
+
+header>.h_ul1>li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+header>.h_ul1>li:first-child:before {
+    content: "";
+}
+
+header>.h_ul1>li>a:hover,
+header>.h_ul1>li>a:focus {
+    background: #222;
+    color: #fff;
+}
+
+header>.h_ul1>li>a {
+    display: block;
+    /* background: plum; */
+    width: 100%;
+    padding: 1px 10px;
+    border: 1px solid black;
+}
+
+header>.h_ul1>li:first-child>a {
+    border-radius: 20px 0px 0px 20px;
+}
+
+header>.h_ul1>li:last-child>a {
+    border-radius: 0px 20px 20px 0px;
+}
+
+header>.h_ul2 {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+header>.h_ul2::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header>.h_ul2>li {
+    float: left;
+}
+
+header>.h_ul2>li>a {
+    display: block;
+    /* background: plum; */
+    width: 100%;
+    padding: 2px 12px;
+    border: 1px solid black;
+}
+
+header>.h_ul2>li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+header>.h_ul2>li:first-child:before {
+    content: "";
+}
+
+header>.h_ul2>li>a:hover,
+header>.h_ul2>li>a:focus {
+    background: #222;
+    color: #fff;
+}
+
+header>.h_ul2>li:first-child>a {
+    border-radius: 10px 0px 0px 10px;
+}
+
+header>.h_ul2>li:last-child>a {
+    border-radius: 0px 10px 10px 0px;
+}
+
+/* section */
+section {
+    overflow: hidden;
+    padding: 10px 0px;
+}
+
+section>article {
+    width: 750px;
+    float: left;
+    /* background: linen; */
+}
+
+section>article>.s_l {
+    padding: 20px;
+    border: 1px solid #222;
+    margin-bottom: 10px;
+}
+
+section>article>.s_l:last-child {
+    margin-bottom: 0px;
+}
+
+section>aside {
+    width: 200px;
+    float: right;
+    /* background: lightgray; */
+    padding: 5px 0px;
+}
+
+.rabox_cnt>.rabox_cnt_fir {}
+
+.rabox_cnt_fir_one {
+    padding: 10px;
+}
+
+.rabox_cnt>.rabox_cnt_fir>.rabox_cnt_fir_one {
+    border-top: 1px solid black;
+}
+
+.rabox_cnt_fir_one>img {
+    float: left;
+    margin: 2px 10px 0px 0px;
+}
+
+.rabox_cnt_fir_one>h4,
+.rabox_cnt_fir_one>p {
+    width: 110px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*  */
+.rabox_cnt>.rabox_cnt_sec {}
+
+.rabox_cnt_sec_two {
+    padding: 10px;
+}
+
+.rabox_cnt>.rabox_cnt_sec>.rabox_cnt_sec_two {
+    border-top: 1px solid black;
+}
+
+.rabox_cnt_sec_two>img {
+    float: left;
+    margin: 2px 10px 0px 0px;
+}
+
+.rabox_cnt_sec_two>h4,
+.rabox_cnt_sec_two>p {
+    width: 110px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.aside>input[type=radio] {
+    display: none;
+}
+
+.a_rad {
+    border: 1px solid black;
+}
+
+.a_rad>label {
+    background: white;
+    color: black;
+    display: inline-block;
+    width: 97px;
+    text-align: center;
+}
+
+.a_rad>label[for=rad_f] {
+    background: white;
+    color: black;
+}
+
+​ .a_rad>label[for=rad_s] {
+    background: black;
+    color: white;
+}
+
+input[type=radio]~.rabox_cnt_sec {
+    display: none;
+}
+
+input[id="rad_f"]:checked ~ .rabox_cnt_fir{display: block;}
+
+input[id="rad_s"]:checked ~ .rabox_cnt_sec{display: block;}
+/* .rabox_cnt_sec {
+    display: none;
+} */
+
+.aside>input:nth-of-type(1):checked~label:nth-of-type(1) {
+    background: white;
+    color: black;
+}
+
+/* input:nth-of-type(2):checked~label:nth-of-type(2) {
+    background: white;
+} */
+
+/* input:nth-of-type(1):checked~div:nth-of-type(1) {
+    display: block;
+} */
+
+/* input:nth-of-type(2):checked~div:nth-of-type() {
+    display: block;
+} */
+
+/* footer */
+footer {}
+
+footer>.footer_cnt {
+    width: 100%;
+    text-align: center;
+}
